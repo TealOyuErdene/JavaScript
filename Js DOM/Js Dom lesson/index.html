@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="hello"></div>
+
+        <div class="dummy"></div>
+        <span class="dummy"></span>
+        <div class="dummy"></div>
+
+        <ul>
+            <li>HTML</li>
+            <li>JS</li>
+            <li>CSS</li>
+        </ul>
+
+        <script>
+            const divEl = document.getElementById('hello');
+            // divEl.innerHTML = '<strong>Hello world</strong>';
+            divEl.innerText = '<strong>Hello world</strong>';
+            console.log(divEl);
+
+            divEl.style.color = 'white'
+            divEl.style.backgroundColor = 'black'
+            divEl.style.fontSize = '30px'
+
+            const dummyElements = document.getElementsByClassName('dummy');
+            console.log(dummyElements);
+
+            console.log(document.querySelector('ul li'));    //neg element barij avna
+            console.log(document.querySelectorAll('ul li')); //buh elementiig barij avna
+
+            const newDiv = document.createElement('h1'); //shine element uusgeh
+            // console.log(newDiv)
+
+            const newContent = document.createTextNode('tavtai moril'); //shine text uusgeh
+            // console.log(newContent)
+            newDiv.appendChild(newContent);
+            console.log(newDiv)
+
+        </script>
+    </body>
+</html>
