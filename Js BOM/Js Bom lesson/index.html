@@ -2,8 +2,25 @@
 <html>
     <head></head>
     <body>
+        <button onclick="openWindow()">Open</button>
+        <button onclick="removeRequest()">Remove</button>
+        <button onclick="openWindowAfter3()">Open Window 3 Second</button>
         <script>
-            
+            function openWindow(){
+                window.open('https://github.com/', "Oyu/'s Git", 'height=700, width=500, top = 100, left = 500 ')
+            }
+
+            function removeRequest(){
+                let result = window.confirm('Ustgah uu')
+                if(result){
+                    alert('Ustgalaa')
+                }
+            }
+
+            function openWindowAfter3(){
+                setTimeout(openWindow , 3 * 1000, 'setTimeout Demo!')
+            }
+        
         </script>
     </body>
 </html>
