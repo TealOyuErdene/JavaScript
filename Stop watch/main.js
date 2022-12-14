@@ -10,18 +10,19 @@ startEl.style.cssText = "background-color: #4caf50; font-size:20px; border: none
 stopEl.style.cssText = "background-color: #f44336; font-size:20px; border: none; border-radius: 50%; width: 100px; height: 100px; color: white; cursor: pointer;"
 resetEl.style.cssText = "background-color: #2196f3; font-size:20px; border: none; border-radius: 50%; width: 100px; height: 100px; color: white; cursor: pointer;"
 
+let second = 00
 
 function start(){
-    let time = 0
-    setInterval(centisecond, 10)
-    function centisecond(){
-      centisecondEl.innerHTML = time
-      time++
-    }
+    // let time = 0
+    // setInterval(centisecond, 10)
+    // function centisecond(){
+    //   centisecondEl.innerHTML = time
+    //   time++
+    // }
 
-    if(centisecondEl.innerHTML == 100){
-        centisecondEl
-    }
+    // if(centisecondEl.innerHTML == 100){
+    //     centisecondEl
+    // }
     
 
 
