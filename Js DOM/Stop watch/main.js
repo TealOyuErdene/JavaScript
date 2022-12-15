@@ -11,6 +11,8 @@ stopEl.style.cssText = "background-color: #f44336; font-size:20px; border: none;
 resetEl.style.cssText = "background-color: #2196f3; font-size:20px; border: none; border-radius: 50%; width: 100px; height: 100px; color: white; cursor: pointer;"
 
 let second = 00
+let minute = 00
+let centisecond = 00
 
 function start(){
     // let time = 0
@@ -23,9 +25,6 @@ function start(){
     // if(centisecondEl.innerHTML == 100){
     //     centisecondEl
     // }
-    
-
-
     startEl.style.backgroundColor = 'black'
 }
 

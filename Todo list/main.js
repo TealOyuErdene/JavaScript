@@ -1,6 +1,9 @@
 let inputEl = document.getElementById('inputTask')
 let inputValue = inputEl.value
+
 let tasklistEl = document.getElementById('tasklist')
+
+let taskEl = document.getElementById('value')
 
 
 function taskInput(){
@@ -19,7 +22,7 @@ function taskInput(){
 function addNewTask(){
     let now = new Date().getTime()
     let taskString = `<div class="d-flex gap-3" id="${now}">
-                        <div id="value" class="h5 border-end-0 bg-secondary bg-opacity-10 rounded mb-2 " style="width: 80%; height: 50px; padding: 10px; padding-left: 20px;">${inputEl.value}</div>
+                        <div id="value" class="h5 rounded mb-2 " style="width: 80%; height: 50px; padding: 10px; padding-left: 20px; background-color: #eeeeee; border: 1px solid #f49d1a;">${inputEl.value}</div>
                             <div class="d-flex gap-1 justify-content-end">
                             <button type="button" class="btn btn-primary" style="height: 50px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -27,7 +30,7 @@ function addNewTask(){
                                 </svg>
                             </button>
             
-                            <button type="button" class="btn btn-success" style="height: 50px;">
+                            <button type="button" class="btn btn-success" style="height: 50px;" onclick="checkTask('${now}')">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
                                     <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
                                     <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
@@ -53,3 +56,6 @@ function removeTask(id){
     }
 }
 
+function checkTask(id){
+    alert(id)
+}
