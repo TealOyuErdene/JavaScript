@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="time" style="margin: 100px auto; display: flex; gap: 40px; justify-content: center;">
-            <div class="minute" style="display: inline-block; font-weight: bold; font-size: 50px;">00</div>
-            <div class="second" style="display: inline-block; font-weight: bold; font-size: 50px;">00</div>
-            <div class="centisecond" style="display: inline-block; font-weight: bold; font-size: 50px;">0</div>
+        <div class="time">
+            <div class="minute">00</div>
+            <div class="second">00</div>
+            <div class="centisecond">00</div>
         </div>
 
-        <div class="btn" style="display: flex; justify-content: center; gap: 20px;">
-            <button onclick="start()">Start</button>
-            <button onclick="stop()">Stop</button>
-            <button onclick="reset()">Reset</button>
+        <div class="btn">
+            <button class="start" onclick="start()">Start</button>
+            <button class="stop" onclick="stop()">Stop</button>
+            <button class="reset" onclick="reset()">Reset</button>
         </div>
 
         <script src="main.js"></script>

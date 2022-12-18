@@ -1,0 +1,51 @@
+.time{
+    margin: 100px auto;
+    display: flex; 
+    gap: 40px;
+    justify-content: center;
+}
+
+.time div{
+    display: inline-block; 
+    font-weight: bold;
+    font-size: 50px
+}
+
+.btn{
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+}
+
+.start{
+    background-color: #4caf50; 
+    font-size:20px; 
+    border: none; 
+    border-radius: 50%; 
+    width: 100px; 
+    height: 100px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.stop{
+    background-color: #f44336; 
+    font-size:20px; 
+    border: none; 
+    border-radius: 50%; 
+    width: 100px; 
+    height: 100px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.reset{
+    background-color: #2196f3; 
+    font-size:20px; 
+    border: none; 
+    border-radius: 50%; 
+    width: 100px; 
+    height: 100px; 
+    color: white; 
+    cursor: pointer;
+}
