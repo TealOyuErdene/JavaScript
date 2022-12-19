@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .btn{
+                font-size: 20px;
+                padding: 3px;
+            }
+
+            .color1{
+                margin-top: 30px;
+                font-size: 30px;
+            }
+
+            .color2{
+                margin-top: 30px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn" onclick="changeColor()">Click to set paragraph background color</button>
+        <div class="color1">Click to Set background color</div>
+        <div class="color2">Click to Change another color</div>
+        <script>
+
+            function changeColor(){
+                let text1 = document.getElementsByTagName('div')[0].style.backgroundColor = 'red'
+                let text2 = document.getElementsByTagName('div')[1].style.backgroundColor = 'yellow'
+            }
+        </script>
+    </body>
+</html>
