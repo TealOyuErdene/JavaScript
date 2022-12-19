@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <select id="colorSelect">
+                <option></option>
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+                <input type="button" value="Select and Remove" onclick="selectColor()" style="margin-left: 10px;"/>
+            </select>
+        </form>
+
+
+        <script>
+            function selectColor(){
+               let item = document.getElementById('colorSelect')
+               item.remove(item.selectedIndex)
+               alert(`No.of items :`+ item.length + '\n' + item.innerText)
+            }
+           
+        </script>
+    </body>
+</html>

@@ -3,7 +3,31 @@
     <head></head>
     <body>
         <script>
-            
+            function sum(a, b, callback){
+                const c = a + b
+                callback(c)
+            }
+
+            function displayInLog(text){
+                console.log(text)
+            }
+
+            function displayInAlert(text){
+                alert(text)
+            }
+
+            sum(12, 9, displayInLog)
+            sum(12, 5, displayInAlert)
+
+
+            //callback hell
+            sum(12, 13, function(niilber){
+                sum(niilber, 12, function(niilber2){
+                    sum(niilber2, 7, function(niilber3){
+                        document.write(niilber3)
+                    })
+                })
+            })
         </script>
     </body>
 </html>

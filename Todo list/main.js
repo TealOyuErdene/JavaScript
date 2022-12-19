@@ -53,6 +53,7 @@ function addNewTask(){
 function removeTask(id){
     if(confirm('Устгах уу')){
         document.getElementById(id).remove()
+
     }
 }
 
