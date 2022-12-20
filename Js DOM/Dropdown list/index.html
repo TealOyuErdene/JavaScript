@@ -6,7 +6,6 @@
     <body>
         <form>
             <select id="colorSelect">
-                <option></option>
                 <option>Red</option>
                 <option>Green</option>
                 <option>White</option>
@@ -17,8 +16,9 @@
 
 
         <script>
+            let item = document.getElementById('colorSelect')
+            alert(`No.of items :`+ item.length + '\n' + item.innerText)
             function selectColor(){
-               let item = document.getElementById('colorSelect')
                item.remove(item.selectedIndex)
                alert(`No.of items :`+ item.length + '\n' + item.innerText)
             }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .colorBox{
+                margin-top: 100px;
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+            }
+            .color{
+                width:100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+
+            .imageBox{
+                padding-top: 100px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .img{
+                height: 400px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="colorBox">
+            <div onclick="red()" class="color color1" style="background-color: rgb(255, 0, 0);"></div>
+            <div onclick="black()" class="color color2" style="background-color: rgb(0, 0, 0);"></div>
+            <div onclick="green()" class="color color3" style="background-color:rgb(17, 182, 1)"></div>
+            <div onclick="orange()" class="color color4" style="background-color: rgb(255, 140, 0)"></div>
+            <div onclick="pink()" class="color color5" style="background-color: rgb(232, 46, 124)"></div>
+        </div>
+        <div class="imageBox">
+            <img src="https://media.istockphoto.com/id/1354031012/photo/red-t-shirt-mockup-men-as-design-template-tee-shirt-blank-isolated-on-white-front-view.jpg?s=612x612&w=0&k=20&c=_5QLLkUa0-ZzSK1rp6Ie-ZRBPOEku4as4ZMrZg-y2GI="class="red img" alt="">
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Basic-T-Shirt-PNG-Background.png" class="black img" alt="">
+            <img src="https://media.istockphoto.com/id/922855190/photo/green-shortsleeve-cotton-tshirt-on-a-mannequin-isolated.jpg?s=612x612&w=0&k=20&c=sagw9lI7cjldjiIUV_xX2uHGW-u2vOUNGZlOBjGjB3g=" class="yellow img" alt="">
+            <img src="https://i.pinimg.com/736x/bd/ef/cb/bdefcbc72735f64db17f3250b1e64245.jpg" class="orange img" alt="">
+            <img src="https://www.pngarts.com/files/5/Plain-Pink-T-Shirt-Transparent-Image.png" class="pink img" style="height: 500px;" alt="">
+        </div>
+     
+        <script>
+            function red(){
+                document.getElementsByTagName('img')[0].style.display = 'block'
+                document.getElementsByTagName('img')[1].style.display = 'none'
+                document.getElementsByTagName('img')[2].style.display = 'none'
+                document.getElementsByTagName('img')[3].style.display = 'none'
+                document.getElementsByTagName('img')[4].style.display = 'none'
+                
+             }
+
+             function black(){
+                let blackImage = document.getElementsByTagName('img')[1].style.display = 'block'
+                document.getElementsByTagName('img')[0].style.display = 'none'
+                document.getElementsByTagName('img')[2].style.display = 'none'
+                document.getElementsByTagName('img')[3].style.display = 'none'
+                document.getElementsByTagName('img')[4].style.display = 'none'
+             }
+
+             function green(){
+                let blackImage = document.getElementsByTagName('img')[2].style.display = 'block'
+                document.getElementsByTagName('img')[1].style.display = 'none'
+                document.getElementsByTagName('img')[0].style.display = 'none'
+                document.getElementsByTagName('img')[3].style.display = 'none'
+                document.getElementsByTagName('img')[4].style.display = 'none'
+             }
+
+             function orange(){
+                let blackImage = document.getElementsByTagName('img')[3].style.display = 'block'
+                document.getElementsByTagName('img')[1].style.display = 'none'
+                document.getElementsByTagName('img')[2].style.display = 'none'
+                document.getElementsByTagName('img')[0].style.display = 'none'
+                document.getElementsByTagName('img')[4].style.display = 'none'
+             }
+
+             function pink(){
+                let blackImage = document.getElementsByTagName('img')[4].style.display = 'block'
+                document.getElementsByTagName('img')[1].style.display = 'none'
+                document.getElementsByTagName('img')[2].style.display = 'none'
+                document.getElementsByTagName('img')[3].style.display = 'none'
+                document.getElementsByTagName('img')[0].style.display = 'none'
+             }
+
+             
+        </script>
+    </body>
+</html>
