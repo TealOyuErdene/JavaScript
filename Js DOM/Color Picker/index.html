@@ -9,8 +9,8 @@
                 justify-content: center;
             }
             .color{
-                width:100px;
-                height: 100px;
+                width:90px;
+                height: 90px;
                 border-radius: 50%;
             }
 
@@ -24,15 +24,21 @@
                 height: 400px;
                 display: none;
             }
+
+            button:hover{
+                width: 110px;
+                height: 110px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
         <div class="colorBox">
-            <div onclick="red()" class="color color1" style="background-color: rgb(255, 0, 0);"></div>
-            <div onclick="black()" class="color color2" style="background-color: rgb(0, 0, 0);"></div>
-            <div onclick="green()" class="color color3" style="background-color:rgb(17, 182, 1)"></div>
-            <div onclick="orange()" class="color color4" style="background-color: rgb(255, 140, 0)"></div>
-            <div onclick="pink()" class="color color5" style="background-color: rgb(232, 46, 124)"></div>
+            <button onclick="red()" class="color color1" style="background-color: rgb(255, 0, 0); border: none;"></button>
+            <button onclick="black()" class="color color2" style="background-color: rgb(0, 0, 0); border: none;"></button>
+            <button onclick="green()" class="color color3" style="background-color:rgb(17, 182, 1); border: none;"></button>
+            <button onclick="orange()" class="color color4" style="background-color: rgb(255, 140, 0); border: none; "></button>
+            <button onclick="pink()" class="color color5" style="background-color: rgb(232, 46, 124); border: none;"></button>
         </div>
         <div class="imageBox">
             <img src="https://media.istockphoto.com/id/1354031012/photo/red-t-shirt-mockup-men-as-design-template-tee-shirt-blank-isolated-on-white-front-view.jpg?s=612x612&w=0&k=20&c=_5QLLkUa0-ZzSK1rp6Ie-ZRBPOEku4as4ZMrZg-y2GI="class="red img" alt="">
