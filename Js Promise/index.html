@@ -3,10 +3,37 @@
     <head></head>
     <body>
         <script>
-            const promise = new Promise((resolve, reject) =>{
-                resolve('success')
-                reject('fail')
+            // const promise = new Promise((resolve, reject) =>{
+            //     resolve('success')
+            //     reject('fail')
+            // })
+
+            const undaandGuihAmlalt = new Promise((resolve, reject) =>{
+                setTimeout(() => {
+                    const undaabaival = true
+                    if(undaabaival){
+                        resolve('Mai undaagaa av')
+                    }else{
+                        reject('Undaa alga')
+                    }
+                }, 3000)
             })
+
+            console.log(undaandGuihAmlalt)
+
+            undaandGuihAmlalt
+            .then((data) => {
+                console.info(data)
+                // console.table({message: data})
+            })
+            .catch((err) => {
+                console.error(err)
+            })
+            .finally(() => {
+                console.log('undaanii asuudal shiidegdsen')
+            })
+
+            console.log('after promise')
         </script>
     </body>
 </html>

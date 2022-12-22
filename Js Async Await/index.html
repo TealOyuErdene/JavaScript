@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       <script>
+        async function fryEgg() {
+            let amlalt = new Promise((resolve, reject) => {
+                setTimeout (() => {
+                    resolve('done!')
+                    reject ('stop working')
+                }, 2000)
+            })
+
+            let result = await amlalt
+            console.log(result)
+        }
+        // console.log(fryEgg())
+        fryEgg()
+        console.log('final')
+       </script> 
+    </body>
+</html>
