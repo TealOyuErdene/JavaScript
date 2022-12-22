@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="photos"></div>
+        <script>
+            let photos = document.getElementById('photos')
+           
+
+            // fetch('https://jsonplaceholder.typicode.com/photos')
+            // .then((res) => res.json())
+            // .then((data) => {
+            //     for(let i = 0; i < data.length / 2; i++){
+            //         let imgEl = document.createElement('img')
+            //         imgEl.src = data[i].url;
+            //         photos.append(imgEl)
+            //    }
+            // }) 
+
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then((res) => res.json())
+            .then((userData) => {
+                let textEl = document.createElement('div')
+                textEl.innerHTML = userData[0]
+                photos.append(textEl)
+            })
+        </script>
+    </body>
+</html>
