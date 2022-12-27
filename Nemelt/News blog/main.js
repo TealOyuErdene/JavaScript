@@ -15,7 +15,6 @@ fetch('https://dummyjson.com/posts')
         cardBox[i].style.overflow = "hidden";
     }
 
-    // for(let)
     fetch('https://dummyjson.com/products')
     .then((res) => res.json())
     .then((imageData) => {
