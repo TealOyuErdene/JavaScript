@@ -1,17 +1,28 @@
 let cardTitle = document.getElementsByClassName('card-title')
 let cardText = document.getElementsByClassName('card-text')
 let cardBox = document.getElementsByClassName('card')
+
+let imageEl = document.getElementsByClassName('images')
 fetch('https://dummyjson.com/posts')
 .then((res) => res.json())
 .then((postData) => {
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < 8; i++){
         cardTitle[i].innerHTML = postData.posts[i].title
     }
 
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < 8; i++){
         cardText[i].innerHTML = postData.posts[i].body
         cardBox[i].style.overflow = "hidden";
     }
+
+    // for(let)
+    fetch('https://dummyjson.com/products')
+    .then((res) => res.json())
+    .then((imageData) => {
+        let img = document.createElement('img')
+        img.src = imageData.products[0].thumbnail
+        imageEl[0].append(img)
+    })
 })
 
 let userProfile = document.getElementById('userProfile')
@@ -37,5 +48,4 @@ fetch('https://dummyjson.com/users')
         }
         }   
     )
-                 
 })
