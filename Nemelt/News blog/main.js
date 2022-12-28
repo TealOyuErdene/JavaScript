@@ -15,13 +15,17 @@ fetch('https://dummyjson.com/posts')
         cardBox[i].style.overflow = "hidden";
     }
 
-    fetch('https://dummyjson.com/products')
-    .then((res) => res.json())
-    .then((imageData) => {
-        let img = document.createElement('img')
-        img.src = imageData.products[0].thumbnail
-        imageEl[0].append(img)
-    })
+    for(let i = 0; i < 8; i++){
+        fetch('https://jsonplaceholder.typicode.com/photos')
+        .then((res) => res.json())
+        .then((imageData) => {
+            let img = document.createElement('img')
+            img.src = imageData[i].url
+            img.classList.add('thumbnail')
+            imageEl[i].append(img)
+        })
+    }
+ 
 })
 
 let userProfile = document.getElementById('userProfile')
