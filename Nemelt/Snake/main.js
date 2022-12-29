@@ -12,16 +12,14 @@
 let area = document.getElementById('area')
 area.style.width = `${areaWidth * scale}px`;
 area.style.height = `${areaHeight * scale}px`;
-let direction = 'right'
+
+let direction = initialDirection
+let positions = initialPositions
 
 let food;
 generateFood();
 
-let positions = [
-    {x: 1, y: 1},
-    {x: 2, y: 1},
-    {x: 3, y: 1},
-]
+
  
 document.addEventListener('keyup', (event) => {
     switch(event.key){
@@ -57,7 +55,25 @@ function generateFood() {
         x: Math.floor(Math.random() * areaWidth),
         y: Math.floor(Math.random() * areaHeight),
     }
+
+    let hoolDavhardsan = false;
+    for(let i = 0; i < positions.length; i++){
+        if(positions[i].x === food.x && positions[i].y === food.y){
+            hoolDavhardsan = true;
+            break;
+        }
+    }
+
+    if(hoolDavhardsan){
+        generateFood()
+    }
 };
+
+// function beep(){
+//     let sound = new Audio()
+//     sound.play()
+// }
+
 
 function goLeft(){
     const newPositions = []
@@ -116,6 +132,11 @@ function goDown(){
     positions = newPositions
 }
 
+function resetGame(){
+    positions = initialPositions
+    direction = initialDirection
+    generateFood()
+}
 
 setInterval(() => {
     switch(direction){
@@ -139,8 +160,17 @@ setInterval(() => {
 
     let head = positions[0]
     if(food.x === head.x && food.y === head.y){
+        // beep()
         positions.push({})
         generateFood()
+    }
+
+    for(let i = 1; i < positions.length; i++){
+        if(head.x === positions[i].x && head.y === positions[i].y){
+            alert('Game over')
+            resetGame()
+            break;
+        }
     }
 }, speed)
 
